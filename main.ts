@@ -1,24 +1,32 @@
-let distancia = 0
-let suma = 0
 input.onButtonPressed(Button.A, function () {
-	
+    if (distancia == 0 && distancia < 7) {
+        total += total + 50
+    }
+    if (distancia == 0 && distancia < 7) {
+        total += total + 100
+    }
+    if (distancia == 0 && distancia < 7) {
+        total += total + 200
+    }
+    if (distancia == 0 && distancia < 7) {
+        total += total + 500
+    }
+    if (distancia == 0 && distancia < 7) {
+        total += total + 1000
+    }
 })
 input.onButtonPressed(Button.B, function () {
-    let distancia_cm = ""
     distancia = sonar.ping(
     DigitalPin.P1,
     DigitalPin.P2,
     PingUnit.Centimeters
     )
-    lcd1602.set_backlight(lcd1602.on_off.on)
-    if (distancia_cm == "7") {
-        let count = ""
-        suma += 50
-        basic.showNumber(suma)
-        lcd1602.putString(
-        count,
-        8,
-        0
-        )
-    }
 })
+let distancia = 0
+let total = 0
+total = 0
+lcd1602.setAddress(
+lcd1602.I2C_ADDR.addr1
+)
+lcd1602.set_LCD_Show(lcd1602.visibled.visible)
+lcd1602.set_backlight(lcd1602.on_off.on)
