@@ -1,17 +1,17 @@
 input.onButtonPressed(Button.A, function () {
-    if (distancia == 0 && distancia < 7) {
+    if (distancia == 0 && distancia < 9) {
         total += total + 50
     }
-    if (distancia == 12 && distancia < 14) {
+    if (distancia == 9 && distancia < 12) {
         total += total + 100
     }
-    if (distancia == 14 && distancia < 21) {
+    if (distancia == 12 && distancia < 15) {
         total += total + 200
     }
-    if (distancia == 21 && distancia < 29) {
+    if (distancia == 15 && distancia < 19) {
         total += total + 500
     }
-    if (distancia == 29 && distancia < 32) {
+    if (distancia == 19 && distancia < 22) {
         total += total + 1000
     }
 })
@@ -32,6 +32,6 @@ lcd1602.set_LCD_Show(lcd1602.visibled.visible)
 lcd1602.set_backlight(lcd1602.on_off.on)
 lcd1602.putNumber(
 total,
-3,
-1
+1,
+0
 )
