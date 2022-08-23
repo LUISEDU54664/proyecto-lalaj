@@ -30,3 +30,8 @@ lcd1602.I2C_ADDR.addr1
 )
 lcd1602.set_LCD_Show(lcd1602.visibled.visible)
 lcd1602.set_backlight(lcd1602.on_off.on)
+lcd1602.putNumber(
+total,
+3,
+1
+)
