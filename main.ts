@@ -2,16 +2,16 @@ input.onButtonPressed(Button.A, function () {
     if (distancia == 0 && distancia < 7) {
         total += total + 50
     }
-    if (distancia == 0 && distancia < 7) {
+    if (distancia == 12 && distancia < 14) {
         total += total + 100
     }
-    if (distancia == 0 && distancia < 7) {
+    if (distancia == 14 && distancia < 21) {
         total += total + 200
     }
-    if (distancia == 0 && distancia < 7) {
+    if (distancia == 21 && distancia < 29) {
         total += total + 500
     }
-    if (distancia == 0 && distancia < 7) {
+    if (distancia == 29 && distancia < 32) {
         total += total + 1000
     }
 })
