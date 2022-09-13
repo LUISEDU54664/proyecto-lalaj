@@ -17,16 +17,19 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     total = 0
-    lcd1602.setAddress(
-    lcd1602.I2C_ADDR.addr1
-    )
-    lcd1602.set_LCD_Show(lcd1602.visibled.visible)
-    lcd1602.set_backlight(lcd1602.on_off.on)
-    lcd1602.putNumber(
-    total,
-    1,
-    0
-    )
+    if (pins.analogReadPin(AnalogPin.P3) == 0) {
+        pins.digitalWritePin(DigitalPin.P8, 0)
+        lcd1602.setAddress(
+        lcd1602.I2C_ADDR.addr1
+        )
+        lcd1602.set_LCD_Show(lcd1602.visibled.visible)
+        lcd1602.set_backlight(lcd1602.on_off.on)
+        lcd1602.putNumber(
+        total,
+        1,
+        0
+        )
+    }
 })
 input.onButtonPressed(Button.B, function () {
     distancia = sonar.ping(
