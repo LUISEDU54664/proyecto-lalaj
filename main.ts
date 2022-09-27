@@ -28,3 +28,6 @@ DigitalPin.P1,
 DigitalPin.P2,
 PingUnit.Centimeters
 )
+loops.everyInterval(60000, function () {
+    basic.showNumber(total)
+})
