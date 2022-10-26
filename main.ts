@@ -36,7 +36,7 @@ DigitalPin.P2,
 PingUnit.Centimeters
 )
 loops.everyInterval(86, function () {
-    basic.showNumber(total)
+	
 })
 basic.forever(function () {
     distancia = sonar.ping(
