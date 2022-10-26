@@ -35,6 +35,9 @@ DigitalPin.P1,
 DigitalPin.P2,
 PingUnit.Centimeters
 )
+loops.everyInterval(86, function () {
+    basic.showNumber(total)
+})
 basic.forever(function () {
     distancia = sonar.ping(
     DigitalPin.P1,
@@ -43,10 +46,7 @@ basic.forever(function () {
     )
     basic.showNumber(distancia)
     basic.pause(1000)
-    if (distancia < 20) {
-        basic.showString("" + (distancia))
+    if (distancia < 0) {
+        basic.showString("" + (total))
     }
-})
-loops.everyInterval(100, function () {
-    basic.showNumber(total)
 })
