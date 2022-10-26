@@ -44,7 +44,7 @@ basic.forever(function () {
     basic.showNumber(distancia)
     basic.pause(1000)
     if (distancia < 20) {
-        basic.showIcon(IconNames.Heart)
+        basic.showString("" + (distancia))
     }
 })
 loops.everyInterval(100, function () {
