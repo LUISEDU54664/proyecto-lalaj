@@ -18,6 +18,7 @@ input.onButtonPressed(Button.A, function () {
     if (distancia == 19 && distancia >= 22) {
         total += total + 1000
         basic.showNumber(1000)
+        basic.clearScreen()
     }
 })
 input.onButtonPressed(Button.B, function () {
